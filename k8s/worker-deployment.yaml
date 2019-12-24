@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-deployment
+spec:
+  replicas: 1 # single pod, we can scale it later as this is the part that does Fibonnaci calculations
+  selector:
+    matchLabels:
+      component: worker
+  template:
+    metadata:
+      labels:
+        component: worker # label that matches the selector
+    spec: # configure what exactly this Pod is running
+      containers:
+        - name: worker
+          image: stephengrider/multi-worker
+          # No port assigned since no other object is accessing multi-worker.
