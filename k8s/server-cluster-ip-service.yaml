@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: server-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector:  # to tell the service what sorts of Pods it supposed to provide access to
+    component: server # this should match the component defined in server.deployment.yaml
+  ports:
+    - port: 5000
+      targetPort: 5000
