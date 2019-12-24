@@ -5,6 +5,8 @@
 
 ![alt text](https://github.com/rostams-lyft/complexk8s/blob/master/images/architecture.png)
 
+Please look at [k8s folder](https://github.com/rostams-lyft/complexk8s/tree/master/k8s) for configuration file associated with each of these components.
+
 ## Definitions
 
 ### Volume in Kubernetes
