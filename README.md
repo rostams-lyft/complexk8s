@@ -31,6 +31,18 @@ When choosing one of those PVCs, then Kubernetes checks the readily available st
 If the volume is already available (created ahead of time), it is called Statically Provisioned Persistent Volume.
 If the volume is not created ahead of time, it is called Dynamically Provisioned Persistent Volume.
 
+### Types of objects in Kubernetes
+
+- Pod
+- Deployment
+- Service
+    * ClusterIP
+    * NodePort
+    * LoadBalancer
+    * Ingress
+- Secret 
+
+
 ## Commands
 
 ```shell script
@@ -41,4 +53,9 @@ kubectl describe storageclass
 kubectl get pv
 
 kubectl get pvc
+
+kubectl create secret generic <secret_name> --from-literal key=value
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=***
+
+kubectl get secrets
 ```
