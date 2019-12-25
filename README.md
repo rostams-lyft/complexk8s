@@ -37,4 +37,8 @@ If the volume is not created ahead of time, it is called Dynamically Provisioned
 kubectl get storageclass
 
 kubectl describe storageclass
+
+kubectl get pv
+
+kubectl get pvc
 ```
