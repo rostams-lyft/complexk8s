@@ -34,6 +34,7 @@ If the volume is not created ahead of time, it is called Dynamically Provisioned
 ## Commands
 
 ```shell script
+kubectl get storageclass
 
-
+kubectl describe storageclass
 ```
