@@ -47,7 +47,10 @@ If the volume is not created ahead of time, it is called Dynamically Provisioned
 ## Setting up [ingress-nginx](https://github.com/kubernetes/ingress-nginx)
 
 
-## Commands
+## Kubernetes Commands
+
+Here are some commonly used Kuberenetes command. Please find more commands here. 
+Also, full Kubernetes documentation can be found here.
 
 ```shell script
 kubectl get storageclass
@@ -64,4 +67,29 @@ kubectl create secret generic pgpassword --from-literal PGPASSWORD=***
 kubectl get secrets
 
 minikube dashboard
+```
+
+## Docker Commands
+
+We'd wanted to run an instance of Ruby in a docker container and run a travis CLI on it to encrypt a GCP json file.
+I found it useful to put the commands here for future reference.
+
+```shell script
+
+docker run -it -v $(pwd):/app ruby:2.3 sh
+```
+-it is for and -v is used to set the volume. $(pwd) is the present working directory of the repo to be mapped to app folder.
+Folder name is chosen totally random. Then we use ruby 2.3 image and finally the command that we run is sh to start a shell.
+
+
+```shell script
+gem install travis --no-rdoc --no-ri
+
+gem install travis
+
+travis login
+
+copy joson file to volumed (to be able to use it inside the container)
+
+travis encrypt-file service-account.json -r rostams-lyft/complexk8s
 ```
