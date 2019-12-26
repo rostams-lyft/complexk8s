@@ -35,12 +35,12 @@ If the volume is not created ahead of time, it is called Dynamically Provisioned
 
 - Pod
 - Deployment
-- Service
-    * ClusterIP
-    * NodePort
-    * LoadBalancer
-    * Ingress
-- Secret 
+- Service: Setup Networking in a kubernetes cluster.
+    * ClusterIP: Expose a set of pods to other objects in the cluster.
+    * NodePort: Expose a set of pods to the outside world (only good for dev purpose).
+    * LoadBalancer: Legacy way of getting network traffic into a cluster.
+    * Ingress: Expose a set of services to the outside world.
+- Secret: securely store a piece of info in the cluster, such as DB pw.
 
 
 ## Commands
