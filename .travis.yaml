@@ -15,3 +15,9 @@ before_install:
 
 script:
   - docker run rostam63/react-test npm run test -- --coverage
+
+deploy:
+  provider: script
+  script: bash ./deploy.sh
+  on:
+    branch: master

@@ -81,7 +81,17 @@ docker run -it -v $(pwd):/app ruby:2.3 sh
 -it is for and -v is used to set the volume. $(pwd) is the present working directory of the repo to be mapped to app folder.
 Folder name is chosen totally random. Then we use ruby 2.3 image and finally the command that we run is sh to start a shell.
 
+```shell script
+docker build -t rostam63/multi-client -f ./client/Dockerfile ./client
+```
+Build an image with a tag (-t), docker file location (-f), and specify build context (./client)
 
+```shell script
+docker push rostam63/multi-client
+```
+In order to push to docker hub.
+
+The rest of the commands below are travis commands.
 ```shell script
 gem install travis --no-rdoc --no-ri
 
@@ -89,7 +99,15 @@ gem install travis
 
 travis login
 
-copy joson file to volumed (to be able to use it inside the container)
+copy json file to volumed (to be able to use it inside the container)
 
 travis encrypt-file service-account.json -r rostams-lyft/complexk8s
+```
+
+## Git commands
+
+```shell script
+git rev-parse HEAD
+
+git checkout <SHA>
 ```
