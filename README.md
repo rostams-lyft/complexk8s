@@ -61,4 +61,6 @@ kubectl create secret generic <secret_name> --from-literal key=value
 kubectl create secret generic pgpassword --from-literal PGPASSWORD=***
 
 kubectl get secrets
+
+minikube dashboard
 ```
