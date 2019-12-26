@@ -1,5 +1,5 @@
 # Sample K8s project
-This project is a sample use-case of Kubernetes. At its core, it is simply a Fibonnaci calculator. It has three main components: server, client and worker. It uses redis as the in-memory store and postgres for the persistent layer. We intentionally made this complex architecture just to be a a good sample for learning about Kubernentes. For this reason, the Fibonnaci calculator is implemented recursively with the notorious exponential time complexity with the sole purpose of simulating a complex real system which requires a lot of processing.
+This project is a sample use-case of Kubernetes. At its core, it is simply a Fibonnaci calculator. It has three main components: server, client and worker. It uses redis as the in-memory store and postgres for the persistent layer. We intentionally made this complex architecture just to be a good sample for learning Kubernentes. For this reason, the Fibonnaci calculator is implemented recursively (notorious exponential time complexity) with the sole purpose of simulating a complex real system which requires a lot of processing.
 
 
 ## Architecture
