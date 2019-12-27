@@ -111,3 +111,14 @@ git rev-parse HEAD
 
 git checkout <SHA>
 ```
+
+## Google Cloud commands
+These commands are used to set the project you are working on. These are also used in Travis.yaml file.
+
+```shell script
+gcloud config set project multi-k8s-263219
+
+gcloud config set compute/zone us-west1-a
+
+gcloud container clusters get-credentials multi-cluster
+```
